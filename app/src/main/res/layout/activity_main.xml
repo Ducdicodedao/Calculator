@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/txtViewBox"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="3">
+        <!--Phép tính-->
+        <!--Kết quả-->
+        <TextView
+            android:id="@+id/txtViewEquation"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="end"
+            android:layout_weight="1"
+            android:fontFamily="@font/sfpro"
+            android:gravity="center_vertical"
+            android:paddingRight="10dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/buttonTextSize" />
+        <TextView
+            android:id="@+id/txtViewResult"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="end"
+            android:layout_weight="1"
+            android:text="0"
+            android:fontFamily="@font/sfpro_light"
+            android:gravity="center_vertical"
+            android:paddingRight="10dp"
+            android:textColor="@color/white"
+            android:textSize="70sp" />
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
+    <LinearLayout
+        android:id="@+id/buttonGridBox"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="7" >
+        <LinearLayout
+            android:id="@+id/buttonGridRow1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="match_parent"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnEmpty1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/sfpro"
+                android:padding="2sp"
+                android:background="@drawable/actionbutton"
+                android:textColor="@color/black"
+                android:textSize="@dimen/buttonTextSize"
+                android:visibility="invisible"
+                android:clickable="false"
+                android:text="C" />
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="match_parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnEmpty2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/sfpro"
+                android:layout_weight="1"
+                android:background="@drawable/actionbutton"
+                android:textColor="@color/black"
+                android:visibility="invisible"
+                android:clickable="false"
+                android:textSize="@dimen/buttonTextSize"
+                android:text="C" />
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="match_parent"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnDelete"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/functionbutton"
+                android:text="AC"
+                android:fontFamily="@font/sfpro"
+                android:textColor="@color/black"
+                android:textSize="36dp" />
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnDivide"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/actionbutton"
+                android:textColor="@drawable/button_text_color"
+                android:textSize="@dimen/buttonTextSize"
+                android:fontFamily="@font/sfpro"
+                android:text="÷" />
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+
+        <LinearLayout
+            android:id="@+id/buttonGridRow2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+                <Space
+                android:layout_width="10dp"
+                android:layout_height="match_parent"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnNumber7"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/numberbutton"
+                    android:fontFamily="@font/sfpro"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/buttonTextSize"
+                    android:text="7" />
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnNumber8"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sfpro"
+                    android:background="@drawable/numberbutton"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/buttonTextSize"
+                    android:text="8" />
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnNumber9"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sfpro"
+                    android:background="@drawable/numberbutton"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/buttonTextSize"
+                    android:text="9" />
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnMultiply"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sfpro"
+                    android:background="@drawable/actionbutton"
+                    android:textColor="@drawable/button_text_color"
+                    android:textSize="@dimen/buttonTextSize"
+                    android:text="×" />
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+
+        <LinearLayout
+            android:id="@+id/buttonGridRow3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="match_parent"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnNumber4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/sfpro"
+                android:background="@drawable/numberbutton"
+                android:textColor="@color/white"
+                android:textSize="@dimen/buttonTextSize"
+                android:text="4" />
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="match_parent"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnNumber5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/sfpro"
+                android:background="@drawable/numberbutton"
+                android:textColor="@color/white"
+                android:textSize="@dimen/buttonTextSize"
+                android:text="5" />
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="match_parent"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnNumber6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/sfpro"
+                android:background="@drawable/numberbutton"
+                android:textColor="@color/white"
+                android:textSize="@dimen/buttonTextSize"
+                android:text="6" />
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="match_parent"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSubstract"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/sfpro"
+                android:background="@drawable/actionbutton"
+                android:textColor="@drawable/button_text_color"
+                android:textSize="@dimen/buttonTextSize"
+                android:text="–" />
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+
+        <LinearLayout
+            android:id="@+id/buttonGridRow4"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="match_parent"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnNumber1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/sfpro"
+                android:background="@drawable/numberbutton"
+                android:textColor="@color/white"
+                android:textSize="@dimen/buttonTextSize"
+                android:text="1" />
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="match_parent"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnNumber2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/sfpro"
+                android:background="@drawable/numberbutton"
+                android:textColor="@color/white"
+                android:textSize="@dimen/buttonTextSize"
+                android:text="2" />
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="match_parent"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnNumber3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/sfpro"
+                android:background="@drawable/numberbutton"
+                android:textColor="@color/white"
+                android:textSize="@dimen/buttonTextSize"
+                android:text="3" />
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="match_parent"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnAdd"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/sfpro"
+                android:background="@drawable/actionbutton"
+                android:textColor="@drawable/button_text_color"
+                android:textSize="@dimen/buttonTextSize"
+                android:text="+" />
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+
+        <LinearLayout
+            android:id="@+id/buttonGridRow5"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="match_parent"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnNumber0"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.1"
+                android:fontFamily="@font/sfpro"
+                android:background="@drawable/largenumberbutton"
+                android:textColor="@color/white"
+                android:textSize="@dimen/buttonTextSize"
+                android:text="0        "
+                />
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="match_parent"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnComa"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/sfpro"
+                android:background="@drawable/numberbutton"
+                android:textColor="@color/white"
+                android:textSize="@dimen/buttonTextSize"
+                android:text="," />
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="match_parent"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnEqual"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/sfpro"
+                android:background="@drawable/actionbutton"
+                android:textColor="@drawable/button_text_color"
+                android:textSize="@dimen/buttonTextSize"
+                android:text="=" />
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+    </LinearLayout>
+
+
+</LinearLayout>

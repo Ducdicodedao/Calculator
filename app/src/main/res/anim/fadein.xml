@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@android:anim/linear_interpolator"
+    android:shareInterpolator="true"
+    >
+    <alpha
+        android:duration="500"
+        android:fromAlpha="0.5"
+        android:toAlpha="1"
+        />
+<!--    <item android:state_pressed="true">-->
+<!--        <objectAnimator-->
+<!--            android:propertyName="backgroundTint"-->
+<!--            android:valueTo="@drawable/button_pressed_color"-->
+<!--            android:duration="300"-->
+<!--            android:valueType="drawableType" />-->
+<!--    </item>-->
+<!--    <item>-->
+<!--        <objectAnimator-->
+<!--            android:propertyName="backgroundTint"-->
+<!--            android:valueTo="@android:color/transparent"-->
+<!--            android:duration="300"-->
+<!--            android:valueType="colorType" />-->
+<!--    </item>-->
+</set>
