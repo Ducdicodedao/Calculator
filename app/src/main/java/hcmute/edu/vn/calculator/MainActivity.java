@@ -20,7 +20,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
     Button btnDelete, btnNumber0, btnNumber1, btnNumber2, btnNumber3, btnNumber4, btnNumber5,
             btnNumber6, btnNumber7, btnNumber8, btnNumber9,
-            btnAdd, btnSubstract, btnMultiply, btnDivide, btnEqual, btnComa;
+            btnAdd, btnSubstract, btnMultiply, btnDivide, btnEqual, btnComa, btnPercent, btnReverse;
     TextView txtViewResult, txtViewEquation;
     private Float a;
     private Float b;
@@ -48,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
         btnDivide = findViewById(R.id.btnDivide);
         btnEqual = findViewById(R.id.btnEqual);
         btnComa = findViewById(R.id.btnComa);
+        btnReverse =findViewById(R.id.btnReverse);
+        btnPercent = findViewById(R.id.btnPercent);
         txtViewResult = findViewById(R.id.txtViewResult);
         txtViewEquation = findViewById(R.id.txtViewEquation);
 
@@ -91,6 +93,36 @@ public class MainActivity extends AppCompatActivity {
                 Animation fadein = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fadein);
                 v.startAnimation(fadein);
                 commaClick(v);
+            }
+        });
+
+        btnPercent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!txtViewResult.getText().toString().equals("")){
+                    txtViewResult.setText(txtViewResult.getText().toString().replace(",", "."));
+                    Float temp = Float.parseFloat(txtViewResult.getText().toString());
+                    temp = temp / 100;
+                    txtViewResult.setText(formatNumber(temp));
+                    txtViewResult.setText(txtViewResult.getText().toString().replace(".", ","));
+                }
+                Animation fadein = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fadein);
+                v.startAnimation(fadein);
+            }
+        });
+        btnReverse.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!txtViewResult.getText().toString().equals("") && !txtViewResult.getText().toString().equals("0")){
+                    if(txtViewResult.getText().toString().contains("-")){
+                        txtViewResult.setText(txtViewResult.getText().toString().replace("-",""));
+                    }
+                    else{
+                        txtViewResult.setText("-"+ txtViewResult.getText().toString());
+                    }
+                }
+                Animation fadein = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fadein);
+                v.startAnimation(fadein);
             }
         });
 

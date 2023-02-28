@@ -62,46 +62,41 @@
                 android:layout_width="10dp"
                 android:layout_height="match_parent"/>
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnEmpty1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:fontFamily="@font/sfpro"
-                android:padding="2sp"
-                android:background="@drawable/actionbutton"
-                android:textColor="@color/black"
-                android:textSize="@dimen/buttonTextSize"
-                android:visibility="invisible"
-                android:clickable="false"
-                android:text="C" />
-
-            <Space
-                android:layout_width="10dp"
-                android:layout_height="match_parent" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnEmpty2"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:fontFamily="@font/sfpro"
-                android:layout_weight="1"
-                android:background="@drawable/actionbutton"
-                android:textColor="@color/black"
-                android:visibility="invisible"
-                android:clickable="false"
-                android:textSize="@dimen/buttonTextSize"
-                android:text="C" />
-            <Space
-                android:layout_width="10dp"
-                android:layout_height="match_parent"/>
-
-            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnDelete"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/functionbutton"
                 android:text="AC"
+                android:fontFamily="@font/sfpro"
+                android:textColor="@color/black"
+                android:textSize="36dp" />
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="match_parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnReverse"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/functionbutton"
+                android:text="+/-"
+                android:fontFamily="@font/sfpro"
+                android:textColor="@color/black"
+                android:textSize="36dp" />
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="match_parent"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnPercent"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/functionbutton"
+                android:text="%"
                 android:fontFamily="@font/sfpro"
                 android:textColor="@color/black"
                 android:textSize="36dp" />
